@@ -1,50 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Array.Map</title>
-</head>
-<body>
+  </head>
+  <body>
     <script src="data/data.js"></script>
     <script>
-        console.log('Numbers: ', NumArr);
-        console.log('States: ', States);
-        console.log('');
+      console.log("Numbers: ", NumArr);
+      console.log("States: ", States);
+      console.log("");
 
-        // .MAP
-        let mappedNum = NumArr.map(n => n * 2)
-        console.log('mapped numbers: ', mappedNum);
-        console.log('');
+      // .MAP
+      let mappedNum = NumArr.map((n) => n * 2);
+      console.log("mapped numbers: ", mappedNum);
+      console.log("");
 
-        let mappedIndex = NumArr.map((n, index) => {
-            return `The number ${n} in position ${index}`
-        })
-        console.log('mapped with index: ', mappedIndex);
-        console.log('');
+      let mappedIndex = NumArr.map((n, index) => {
+        return `The number ${n} in position ${index}`;
+      });
+      console.log("mapped with index: ", mappedIndex);
+      console.log("");
 
-        let mappedIndexArray = NumArr.map((n, index, array) => {
-            return `The number ${n} in position ${index}, the total elements in the array is ${array.length}`
-        })
-        console.log('mapped with index & array: ', mappedIndexArray);
-        console.log('');
+      let mappedIndexArray = NumArr.map((n, index, array) => {
+        return `The number ${n} in position ${index}, the total elements in the array is ${array.length}`;
+      });
+      console.log("mapped with index & array: ", mappedIndexArray);
+      console.log("");
 
-        // .MAP on Array of Objects
-        let mappedArr = States.map(s => {
-            return {
-                name: s.State,
-                code: s.Code,
-                date: new Date(s.AdmissionDate)
-            }
-        })
-        console.log('mapped states: ');
-        console.table(mappedArr);
+      // .MAP on Array of Objects
+      let mappedArr = States.map((s) => {
+        return {
+          name: s.State,
+          code: s.Code,
+          date: new Date(s.AdmissionDate),
+        };
+      });
+      console.log("mapped states: ");
+      console.table(mappedArr);
     </script>
     <div id="container">
-        <h1>Array.Map()</h1>
-        <a href="index.html">Home</a>
-        <p>See Console for JavaScript output.</p>
+      <h1>Array.Map()</h1>
+      <a href="index.html">Home</a>
+      <p>See Console for JavaScript output.</p>
     </div>
-</body>
+  </body>
 </html>
